@@ -40,7 +40,14 @@ defmodule Stargate.Producer do
               optional(:key) => String.t(),
               optional(:context) => String.t(),
               optional(:properties) => map(),
-              optional(:replicationClusters) => [String.t()]
+              optional(:replicationClusters) => [String.t()],
+              optional(:sequenceId) => integer(),
+              optional(:disableReplication) => boolean(),
+              optional(:deliverAt) => integer(),
+              optional(:deliverAfterMs) => integer(),
+              optional(:schemaVersion) => integer(),
+              optional(:keySchema) => String.t(),
+              optional(:valueSchema) => String.t()
             }
 
   @doc """
